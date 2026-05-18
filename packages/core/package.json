@@ -1,0 +1,33 @@
+{
+  "name": "@agent-platform/core",
+  "version": "0.1.0",
+  "description": "Agent orchestration engine — coordinator + specialist loop, tool management, memory, LLM routing",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./tools": "./dist/tools/index.js",
+    "./memory": "./dist/memory/index.js",
+    "./llm": "./dist/llm/index.js",
+    "./collaboration": "./dist/collaboration/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "prettier --check ."
+  },
+  "dependencies": {
+    "zod": "^3.23.0",
+    "eventsource-parser": "^2.0.0",
+    "pino": "^9.0.0",
+    "ulid": "^2.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "prettier": "^3.3.0"
+  }
+}
